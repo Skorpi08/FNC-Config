@@ -1,0 +1,105 @@
+board: Kellerboard
+name: KELDIN.de
+meta: 14/07/2023
+arc_tolerance_mm: ''
+junction_deviation_mm: ''
+verbose_errors: ''
+report_inches: ''
+enable_parking_override_control: ''
+use_line_numbers: ''
+planner_blocks: ''
+kinematics:
+  Cartesian: 
+start:
+  must_home: true
+  deactivate_parking: ''
+  check_limits: ''
+steping:
+  engine: I2S_STATIC
+  idle_ms: 254
+  pulse_us: 10
+  dir_delay_us: 10
+  disable_delay_us: 0
+  segments: ''
+i2so:
+  bck_pin: gpio.16
+  data_pin: gpio.21
+  ws_pin: gpio.17
+spi:
+  miso_pin: ''
+  mosi_pin: ''
+  sck_pin: ''
+sdcard:
+  cs_pin: ''
+  card_detect_pin: ''
+  frequency_hz: ''
+coolant:
+  flood_pin: gpio.23
+  mist_pin: NO_PIN
+  delay_ms: 0
+probe:
+  pin: ''
+  toolsetter_pin: ''
+  check_mode_start: ''
+status_outputs:
+  report_interval_ms: I2SO.0:low
+  idle_pin: I2SO.0:low
+  run_pin: I2SO.0:low
+  hold_pin: I2SO.0:low
+  alarm_pin: I2SO.0:low
+control:
+  safety_door_pin: I2SO.0:low
+  reset_pin: I2SO.0:low
+  feed_hold_pin: I2SO.0:low
+  cycle_start_pin: I2SO.0:low
+  macro0_pin: I2SO.0:low
+  macro1_pin: I2SO.0:low
+  macro2_pin: I2SO.0:low
+  macro3_pin: I2SO.0:low
+  fault_pin: I2SO.0:low
+  estop_pin: I2SO.0:low
+macros:
+  startup_line0: I2SO.0:low
+  startup_line1: I2SO.0:low
+  macro0: I2SO.0:low
+  macro1: I2SO.0:low
+  macro2: I2SO.0:low
+  macro3: I2SO.0:low
+  after_homing: I2SO.0:low
+  after_reset: I2SO.0:low
+  after_unlock: I2SO.0:low
+  m30: I2SO.0:low
+  startup: I2SO.0:low
+  reset: I2SO.0:low
+  post_homing: I2SO.0:low
+user_outputs:
+  analog0_pin: I2SO.0:low
+  analog1_pin: I2SO.0:low
+  analog2_pin: I2SO.0:low
+  analog3_pin: I2SO.0:low
+  analog0_hz: I2SO.0:low
+  analog1_hz: I2SO.0:low
+  analog2_hz: I2SO.0:low
+  analog3_hz: I2SO.0:low
+  digital0_pin: I2SO.0:low
+  digital1_pin: I2SO.0:low
+  digital2_pin: I2SO.0:low
+  digital3_pin: I2SO.0:low
+  digital4_pin: I2SO.0:low
+  digital5_pin: I2SO.0:low
+  digital6_pin: I2SO.0:low
+  digital7_pin: I2SO.0:low
+axes:
+  shared_stepper_disable_pin: I2SO.0:low
+  shared_stepper_reset_pin: I2SO.0:low
+  shared_fault_pin: I2SO.0:low
+  x:
+    steps_per_mm: 157.50
+    max_rate_mm_per_min: 10000
+    acceleration_mm_per_sec2: 1300
+    max_travel_mm: 300
+    soft_limits: jk
+    homing:
+      cycle: kk
+      positive_direction: mk
+
